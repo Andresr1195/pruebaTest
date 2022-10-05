@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BitcoinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BitcoinController::class, 'index'])->name('bitcoin-index');
+
+Route::get('/historial', [BitcoinController::class, 'historial'])->name('bitcoin-historial');

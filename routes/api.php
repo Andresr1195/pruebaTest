@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BitcoinController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/updatePrice', [BitcoinController::class, 'updatePrice'])->name('bitcoin-updatePrice');
+Route::get('/getHistory', [BitcoinController::class, 'getHistory'])->name('bitcoin-getHistory');
+

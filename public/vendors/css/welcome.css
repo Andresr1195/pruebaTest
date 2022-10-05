@@ -1,0 +1,12 @@
+.cardPrice{
+    background-color: gray; 
+    color: white
+}
+.cardRed{
+    background-color: rgb(226, 65, 65); 
+    color: white
+}
+.cardGreen{
+    background-color: green; 
+    color: white
+}
